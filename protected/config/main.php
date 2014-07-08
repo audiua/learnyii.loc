@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'LearnYii',
 
 	// preloading 'log' component
 	'preload'=>array('log','bootstrap'),
@@ -17,7 +17,6 @@ return array(
 		'application.models.*',
 		'application.components.*',
 	),
-
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
 		/*
@@ -32,6 +31,10 @@ return array(
 
 	// application components
 	'components'=>array(
+		// 'request'=>[
+		// 	'enableCsrValidation'=>true,
+		// 	'enableCookieValidation'=>true
+		// ],
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
@@ -41,21 +44,12 @@ return array(
 			'urlFormat'=>'path',
 			'showScriptName'=>false,
 			'rules'=>array(
+				'/'=>'home/index',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		
-		
-		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=learnyii',
-			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '0000',
-			'charset' => 'utf8',
-		),
-		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
