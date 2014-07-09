@@ -1,0 +1,30 @@
+.form
+	- $form = $this->beginWidget('bootstrap.widgets.TbActiveForm',['id'=>'signup_form','action'=>Helpers::createUrl('users/create')]);
+
+	// %p(class='note')
+	// 	Fields with 	
+	// 	%span(class='required')
+	// 		*
+	// 	 are required.
+
+
+	.row-fluid
+		= $form->labelEx($user,'username')
+		= $form->textField($user,'username')
+		= $form->error($user,'username')
+	.row-fluid
+		= $form->labelEx($user,'email')
+		= $form->textField($user,'email')
+		= $form->error($user,'email')
+	.row-fluid
+		= $form->labelEx($user,'password')
+		= $form->passwordField($user,'password')
+		= $form->error($user,'password')
+	.row-fluid
+		= $form->labelEx($user,'password_repeat')
+		= $form->passwordField($user,'password_repeat')
+		= $form->error($user,'password_repeat')
+	.row-fluid
+		= CHtml::submitButton('Sign Up',['id'=>'create_user_button'])
+
+	- $this->endWidget()

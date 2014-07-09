@@ -1,0 +1,3 @@
+- if(Yii::app()->user->hasFlash('success'))
+	#success
+		= Yii::app()->user->getFlash('success')

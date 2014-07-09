@@ -20,6 +20,7 @@ class WebTestCase extends CWebTestCase
 	protected function setUp()
 	{
 		parent::setUp();
+		$this->setTimeout(5);
 		$this->setBrowserUrl(TEST_BASE_URL);
 	}
 }

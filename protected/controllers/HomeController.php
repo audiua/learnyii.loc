@@ -4,6 +4,6 @@ class HomeController extends Controller
 {
 	public function actionIndex()
 	{
-		echo 'Welcome';
+		$this->render('index',['greetings'=>'Welcome!!!']);
 	}
 }

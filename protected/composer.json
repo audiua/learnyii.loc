@@ -20,7 +20,12 @@
 	"require": {
 		"delfit/phamlp": "dev-master",
 		"delfit/yii-haml": "dev-master",
-		"clevertech/yii-booster": "v3.0.0"
+		"clevertech/yii-booster": "v3.0.0",
+		"phpunit/phpunit": ">=3.7",
+        "phpunit/phpunit-selenium": ">=1.2",
+        "phpunit/dbunit": ">=1.2",
+        "phpunit/phpunit-story": "*",
+        "phpunit/php-invoker": "*"
 	}
 
 	

@@ -1,2 +1,9 @@
-%h1
-	= $content
+!!!
+%html
+	%head
+		%title 
+			LearnYii
+		%meta(charset="utf-8")
+	%body
+		= $this->renderPartial('//layouts/_flashes')
+		= $content

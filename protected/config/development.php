@@ -12,5 +12,8 @@ return CMap::mergeArray(
 				'charset' => 'utf8',
 			)
 		),
+		'params'=>array(
+			'test'=>''
+		),
 	)
 );
